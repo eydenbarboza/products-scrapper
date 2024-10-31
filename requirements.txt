@@ -1,0 +1,16 @@
+fastapi==0.70.0
+uvicorn==0.15.0
+pydantic==1.9.0
+transitions==0.8.8
+pytest==8.3.2
+requests==2.32.3
+pymongo==4.8.0
+playwright==1.46.0 
+Scrapy==2.11.2
+pandas==2.2.2
+httpx==0.27.0
+scrapeops-python-requests
+scrapeops-scrapy
+python-telegram-bot==21.5
+python-dotenv==1.0.1
+openai==1.51.0

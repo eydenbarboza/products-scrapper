@@ -1,0 +1,41 @@
+
+version: '3.7'
+
+services:
+  
+  db:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+
+  app:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      - DATABASE_URL=mongodb://root:root@db:27017
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  
+  # tests:
+  #   build: .
+  #   command: ["pytest", "/app/tests"]
+  #   volumes:
+  #     - .:/app
+  #     - ./tests:/app/tests
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     TESTING: 'True'
+
+volumes:
+  mongo_data:
+
