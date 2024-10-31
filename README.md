@@ -28,7 +28,7 @@ Implement basic product scraping using Playwright, laying groundwork for future 
 +------------------------v------------------+
 |                Infrastructure Layer       |
 |    (Repositories, Data Sources,           |
-|     External Service Integrations, Playwright/Scrapy)        |
+|     External Service Integrations (Bright Data), Playwright/Scrapy)        |
 +------------------------+------------------+
                          
 ```
@@ -44,6 +44,8 @@ Implement basic product scraping using Playwright, laying groundwork for future 
 - Progressive Scrolling to Load Dynamic Content
 
 # Future Improvements
+
+- Implementation of Rotating IPs with Bright Data: Integrate Bright Data’s rotating IP service to enhance web scraping capabilities by ensuring a stable and reliable connection while minimizing the risk of IP bans. This approach will improve the scraper’s performance and resilience against restrictions imposed by target websites.
 
 - Complete Playwright-Scrapy Integration: Achieve a fully integrated Playwright and Scrapy setup to enable highly scalable web scraping capabilities, allowing for efficient handling of complex web pages and dynamic content.
 
@@ -62,6 +64,7 @@ Implement basic product scraping using Playwright, laying groundwork for future 
 
 
 # Usage
+```bash
 docker compose up -d
 
 
